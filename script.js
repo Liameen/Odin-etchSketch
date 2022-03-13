@@ -1,29 +1,29 @@
-const container = document.querySelector('#container');
+const container = document.querySelector('.container');
 
 const pixels = [
-    createDivPixel('pixel1'),
-    createDivPixel('pixel2'),
-    createDivPixel('pixel3'),
-    createDivPixel('pixel4'),
-    createDivPixel('pixel5'),
-    createDivPixel('pixel6'),
-    createDivPixel('pixel7'),
-    createDivPixel('pixel8'),
-    createDivPixel('pixel9'),
-    createDivPixel('pixel10'),
-    createDivPixel('pixel11'),
-    createDivPixel('pixel12'),
-    createDivPixel('pixel13'),
-    createDivPixel('pixel14'),
-    createDivPixel('pixel15'),
-    createDivPixel('pixel16')
+    createDivPixel('grid-item pixel1'),
+    createDivPixel('grid-item pixel2'),
+    createDivPixel('grid-item pixel3'),
+    createDivPixel('grid-item pixel4'),
+    createDivPixel('grid-item pixel5'),
+    createDivPixel('grid-item pixel6'),
+    createDivPixel('grid-item pixel7'),
+    createDivPixel('grid-item pixel8'),
+    createDivPixel('grid-item pixel9'),
+    createDivPixel('grid-item pixel10'),
+    createDivPixel('grid-item pixel11'),
+    createDivPixel('grid-item pixel12'),
+    createDivPixel('grid-item pixel13'),
+    createDivPixel('grid-item pixel14'),
+    createDivPixel('grid-item pixel15'),
+    createDivPixel('grid-item pixel16')
 ];
 
-// functions to create divs and append them
-function createDivPixel(id){
+// functions to create divs and append them and set id and classes
+function createDivPixel(className){
     var div = document.createElement('div');
-    div.setAttribute('id', id);
-    div.classList = ('pixelClass')
+    div.setAttribute('class', className);
+    //div.classList = ('pixelClass')
 
     return div;
 }
