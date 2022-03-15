@@ -1,3 +1,6 @@
+
+
+/* to make it easier to visualize */
 .grid-item:nth-child(odd) {
     background-color: red;
 } 
@@ -14,4 +17,16 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     
+    
+    
 } 
+
+.grid-item{
+
+}
+
+.grid-item:hover{
+    background-color: black;
+    
+}
+
