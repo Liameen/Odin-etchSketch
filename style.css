@@ -1,4 +1,7 @@
-
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
 
 /* to make it easier to visualize */
 .grid-item:nth-child(odd) {
@@ -10,21 +13,20 @@
 } 
  
 
-/* .container{
+.container{
     width: 700px;
     height: 700px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(16,minmax(0,1fr));
-    grid-template-rows: repeat(16,minmax(0,1fr));
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
     
     
     
-}  */
+} 
 
 .grid-item {
-    
-    border: 1px solid #ddd;
+    border: 1px solid rgb(0, 0, 0);
     text-align: center;
   }
 
@@ -33,17 +35,5 @@
     
 }
 
-:root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-  }
-  
-  .container {
-    width: 700px;
-    height: 700px;
-    display: grid;
-    
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-  }
 
+  
