@@ -18,6 +18,21 @@ body{
     background-color: var(--background-color)
 }
 
+#head{
+    display: flex;
+    justify-content: center;
+}
+
+#resetBtnDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#resetBtn{
+    padding: 20px;
+    margin: 30px;
+}
+
 .container{
     width: 700px;
     height: 700px;

@@ -3,8 +3,7 @@ let numTag = 1;
 
 const container = document.querySelector('.container');
 
-
-
+const resetBtn = document.getElementById('resetBtn');
 
 
 
@@ -23,18 +22,13 @@ function createDivPixel(cols, rows){
     }
 }
 
-createDivPixel(6, 6);
+createDivPixel(16, 16);
 
 
-let pixels = document.querySelectorAll('.grid-item');
+const pixels = document.querySelectorAll('.grid-item');
 
 console.log(pixels);
 
-
-
-// pixels.addEventListener('click', (e) => {
-//     e.target.style.backgroundColor = '#333';
-// })
 
  pixels.forEach((pixel) => {
     pixel.addEventListener('click', (e) => {
@@ -43,3 +37,6 @@ console.log(pixels);
  })
 
 
+resetBtn.onclick = () => {
+    window.location.reload();
+}
