@@ -37,6 +37,7 @@ console.log(pixels);
  })
 
 
+ // refresh button to clear board
 resetBtn.onclick = () => {
     window.location.reload();
 }
