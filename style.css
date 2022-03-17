@@ -1,17 +1,22 @@
 :root {
+    --background-color: rgb(233, 233, 233);
     --grid-cols: 1;
     --grid-rows: 1;
   }
 
 /* to make it easier to visualize */
-.grid-item:nth-child(odd) {
+/* .grid-item:nth-child(odd) {
     background-color: rgb(209, 202, 202);
 } 
 
 .grid-item:nth-child(even) {
     background-color: rgb(168, 168, 221);
 } 
- 
+  */
+
+body{
+    background-color: var(--background-color)
+}
 
 .container{
     width: 700px;
@@ -27,7 +32,6 @@
 
 .grid-item {
     border: 1px solid rgb(0, 0, 0);
-    text-align: center;
   }
 
 .grid-item:hover{
