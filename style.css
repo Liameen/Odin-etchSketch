@@ -18,12 +18,20 @@ body{
     background-color: var(--background-color)
 }
 
+.container{
+    border: 1px black solid;
+}
+
+#head{
+    margin: 0px;
+}
+
 #header{
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
+
 
 #resetBtnDiv{
     display: flex;
@@ -38,7 +46,7 @@ body{
 
 #resetBtn{
     padding: 20px;
-    margin: 30px;
+    margin: 5px;
 }
 
 .container{

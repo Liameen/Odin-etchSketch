@@ -9,7 +9,11 @@ const inputBtn = document.querySelector('#inputBtn');
 
 var input = document.getElementById("plyInput");
 
+
+
+
 // key listen and click listen
+
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
@@ -23,7 +27,11 @@ input.addEventListener("keyup", function(event) {
 // function to get input value
 function getInputValue(){
     var inputValue = document.querySelector('#plyInput').value;
-    createDivPixel(inputValue, inputValue);
+    if(inputValue <= 100){
+        createDivPixel(inputValue, inputValue);
+    }
+
+    
 
     const pixels = document.querySelectorAll('.grid-item');
 
