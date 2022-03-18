@@ -18,14 +18,22 @@ body{
     background-color: var(--background-color)
 }
 
-#head{
+#header{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 #resetBtnDiv{
     display: flex;
     justify-content: center;
+}
+
+#plyInputDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 #resetBtn{
