@@ -5,28 +5,33 @@ const container = document.querySelector('.container');
 const resetBtn = document.getElementById('resetBtn');
 const inputBtn = document.querySelector('#inputBtn');
 
+const containerTextDiv = document.querySelector('#containerTextDiv')
+
+let input;
+let input2;
 
 
-var input = document.getElementById("plyInput");
-var input2 = document.getElementById("plyInput2");
-
-
-
-
-// key listen and click listen
+//key listen and click listen
 
 inputBtn.addEventListener("click", function(event) {
+
+    containerTextDiv.remove();
+    input = prompt('Columns');
+    input2 = prompt('Rows');
+
+
+    
       getInputValue();
   });
   
 
 // function to get input value
 function getInputValue(){
-    var inputValue = document.querySelector('#plyInput').value;
-    var inputValue2 = document.querySelector('#plyInput2').value;
 
-    if(inputValue <= 100 && inputValue2 <= 100){
-        createDivPixel(inputValue, inputValue2);
+   
+
+    if(input <= 100 && input2 <= 100){
+        createDivPixel(input, input2);
     }
 
     
@@ -34,7 +39,13 @@ function getInputValue(){
     const pixels = document.querySelectorAll('.grid-item');
 
 
-// selected tiles turn black
+// selected tiles turn black and reset to default after clear
+
+pixels.forEach((pixel) =>{
+    pixel.style.backgroundColor = 'rgb(233, 233, 233)';
+})
+
+
     pixels.forEach((pixel) => {
         pixel.addEventListener('click', (e) => {
             e.target.style.backgroundColor = '#333';

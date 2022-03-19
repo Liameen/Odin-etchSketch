@@ -1,18 +1,9 @@
 :root {
-    --background-color: rgb(233, 233, 233);
+    --background-color: #E0E1E7;
     --grid-cols: 1;
     --grid-rows: 1;
   }
 
-/* to make it easier to visualize */
-/* .grid-item:nth-child(odd) {
-    background-color: rgb(209, 202, 202);
-} 
-
-.grid-item:nth-child(even) {
-    background-color: rgb(168, 168, 221);
-} 
-  */
 
 body{
     background-color: var(--background-color)
@@ -22,7 +13,14 @@ body{
     border: 1px black solid;
 }
 
+#containerTextDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #head{
+    font-size: 100px;
     margin: 0px;
 }
 
@@ -31,7 +29,6 @@ body{
     align-items: center;
     flex-direction: column;
 }
-
 
 #resetBtnDiv{
     display: flex;
@@ -43,14 +40,6 @@ body{
     justify-content: center;
     margin-bottom: 20px;
 }
-
-#plyInput,
-#plyInput2
-{
-    width: 40px;
-    margin: 0 10px 0 10px;
-}
-
 
 
 #resetBtn{
