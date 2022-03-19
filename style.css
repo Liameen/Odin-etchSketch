@@ -10,8 +10,27 @@ body{
 }
 
 .container{
-    border: 1px black solid;
-}
+    --angle: 0deg;
+    width: 10px;
+    height: 10px;
+    border: 5px solid;
+    /* This will work but yield a wrong result: */
+    border-image: linear-gradient(var(--angle), rgb(116, 33, 33), rgb(163, 163, 52), rgb(50, 170, 50), rgb(51, 160, 160), rgb(19, 19, 145), rgb(138, 32, 138)) 1;
+    animation: 10s rotate linear infinite;
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+
 
 #containerTextDiv{
     display: flex;
@@ -19,8 +38,12 @@ body{
     align-items: center;
 }
 
+#containerTextDiv > h1 {
+    font-size: 50px;
+}
+
 #head{
-    font-size: 100px;
+    font-size: 90px;
     margin: 0px;
 }
 
@@ -30,15 +53,20 @@ body{
     flex-direction: column;
 }
 
+#header > h2, h3 {
+    margin: 10px;
+}
+
 #resetBtnDiv{
     display: flex;
     justify-content: center;
 }
 
-#plyInputDiv{
+#inputBtn{
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin: 10px;
+    padding: 7px;
 }
 
 
