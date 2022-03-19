@@ -44,6 +44,15 @@ body{
     margin-bottom: 20px;
 }
 
+#plyInput,
+#plyInput2
+{
+    width: 40px;
+    margin: 0 10px 0 10px;
+}
+
+
+
 #resetBtn{
     padding: 20px;
     margin: 5px;

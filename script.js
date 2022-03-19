@@ -8,27 +8,25 @@ const inputBtn = document.querySelector('#inputBtn');
 
 
 var input = document.getElementById("plyInput");
+var input2 = document.getElementById("plyInput2");
 
 
 
 
 // key listen and click listen
 
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("inputBtn").click( getInputValue());
-  }
-});
-
-
-
+inputBtn.addEventListener("click", function(event) {
+      getInputValue();
+  });
+  
 
 // function to get input value
 function getInputValue(){
     var inputValue = document.querySelector('#plyInput').value;
-    if(inputValue <= 100){
-        createDivPixel(inputValue, inputValue);
+    var inputValue2 = document.querySelector('#plyInput2').value;
+
+    if(inputValue <= 100 && inputValue2 <= 100){
+        createDivPixel(inputValue, inputValue2);
     }
 
     
@@ -41,9 +39,7 @@ function getInputValue(){
         pixel.addEventListener('click', (e) => {
             e.target.style.backgroundColor = '#333';
         })
-    })
-
-    
+    })    
 }
 
 
@@ -61,8 +57,6 @@ function createDivPixel(cols, rows){
     numTag++;
     }
 }
-
-// createDivPixel(16, 16);
 
 
 
