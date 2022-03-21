@@ -10,6 +10,8 @@ const containerTextDiv = document.querySelector('#containerTextDiv')
 let input;
 let input2;
 
+let selectedColor = 'black';
+
 
 //key listen and click listen
 
@@ -18,7 +20,7 @@ inputBtn.addEventListener("click", function(event) {
     containerTextDiv.remove();
     input = prompt('Columns');
     input2 = prompt('Rows');
-
+   
 
     
       getInputValue();
@@ -46,11 +48,24 @@ pixels.forEach((pixel) =>{
 })
 
 
-    pixels.forEach((pixel) => {
+  pixels.forEach((pixel) => {
         pixel.addEventListener('click', (e) => {
             e.target.style.backgroundColor = '#333';
         })
     })    
+
+// function to allow button to draw with left clicks
+ pixels.forEach((pixel) => {
+        pixel.addEventListener('mouseover', (e) => {
+            if(e.buttons == 1){
+                e.target.style.backgroundColor = '#333';
+            }
+            
+        })
+    })    
+
+
+   
 }
 
 
@@ -68,7 +83,6 @@ function createDivPixel(cols, rows){
     numTag++;
     }
 }
-
 
 
 
