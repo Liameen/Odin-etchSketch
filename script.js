@@ -16,8 +16,9 @@ let selectedColor = 'black';
 //key listen and click listen
 
 inputBtn.addEventListener("click", function(event) {
-
+    container.innerHTML = '';
     containerTextDiv.remove();
+    
     input = prompt('Columns');
     input2 = prompt('Rows');
    
@@ -27,7 +28,7 @@ inputBtn.addEventListener("click", function(event) {
   });
   
 
-// function to get input value
+// function to get input value and draw functions
 function getInputValue(){
 
    
