@@ -7,6 +7,10 @@ const inputBtn = document.querySelector('#inputBtn');
 
 const containerTextDiv = document.querySelector('#containerTextDiv')
 
+const plain = document.getElementById('Plain');
+const shader = document.getElementById('Shader');
+const rainbow = document.getElementById('Rainbow');
+
 let input;
 let input2;
 
@@ -49,32 +53,56 @@ pixels.forEach((pixel) =>{
 })
 
 
-//  
 
-//function to allow button to draw with hold left click and shader
- pixels.forEach((pixel) => {
+
+
+plain.onclick = function (){
+    pixels.forEach((pixel) => {
+        pixel.addEventListener('mouseover', (e) => {
+                e.target.style.backgroundColor = '#333';
+                
+        })
+    })    
+}
+
+
+shader.onclick = function (){
+    pixels.forEach((pixel) => {
         pixel.count = 0;
         pixel.addEventListener('mouseover', (e) => {
             if(e.buttons == 1){
-                e.target.style.backgroundColor = '#333';
-                
+                e.target.style.backgroundColor = 'black';
                 e.target.count += 1;
                 e.target.style.opacity = 0.2 * e.target.count;
-            }
-            
+            }       
         })
     })    
+}
 
+// //function to draw with one shade
+//         function plain(){
+//             pixels.forEach((pixel) => {
+//                 pixel.addEventListener('mouseover', (e) => {
+//                         e.target.style.backgroundColor = '#333';
+                        
+//                 })
+//             })    
+//         }
 
+// //function to allow button to draw with hold left click and shader
+//         function shader(){
+//             pixels.forEach((pixel) => {
+//                 pixel.count = 0;
+//                 pixel.addEventListener('mouseover', (e) => {
+//                     if(e.buttons == 1){
+//                         e.target.style.backgroundColor = 'black';
+//                         e.target.count += 1;
+//                         e.target.style.opacity = 0.2 * e.target.count;
+//                     }       
+//                 })
+//             })    
+//         }
 
-
-    
-        // pixels.forEach((pixel) => {
-        //     pixel.addEventListener('click', (e) => {  
-        //             e.target.style.setProperty('filter', 'brightness(25%)');       
-        //     })
-        // })    
-   
 }
 
 
@@ -99,3 +127,7 @@ function createDivPixel(cols, rows){
 resetBtn.onclick = () => {
     window.location.reload();
 }
+
+
+
+
