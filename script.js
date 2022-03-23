@@ -4,6 +4,7 @@ const scrollHeight = document.body.scrollHeight;
 
 const container = document.querySelector('.container');
 const resetBtn = document.getElementById('resetBtn');
+const inputBtnDiv = document.querySelector('#inputBtnDiv');
 const inputBtn = document.querySelector('#inputBtn');
 
 const containerTextDiv = document.querySelector('#containerTextDiv')
@@ -63,10 +64,13 @@ pixels.forEach((pixel) =>{
     plain.onclick = function (){
         shaderDiv.remove();
         rainbowDiv.remove();
+        inputBtnDiv.remove();
         pixels.forEach((pixel) => {
             pixel.addEventListener('mouseover', (e) => {
+                if(e.buttons == 1){
                     e.target.style.backgroundColor = '#333';
-                    
+                   
+                }                  
             })
         })    
     }
@@ -75,6 +79,7 @@ pixels.forEach((pixel) =>{
     shader.onclick = function (){
         plainDiv.remove();
         rainbowDiv.remove();
+        inputBtnDiv.remove();
         pixels.forEach((pixel) => {
             pixel.count = 0;
             pixel.addEventListener('mouseover', (e) => {
@@ -84,6 +89,22 @@ pixels.forEach((pixel) =>{
                     e.target.style.opacity = 0.1 * e.target.count;
                 }       
             })
+        })    
+    }
+
+    //function rainbow pen
+    rainbow.onclick = function (){
+        plainDiv.remove();
+        shaderDiv.remove();
+        inputBtnDiv.remove();
+        pixels.forEach((pixel) => {;
+            pixel.addEventListener('mouseover', (e) => {
+                if(e.buttons == 1){
+                    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                    e.target.style.backgroundColor = "#" + randomColor;
+                   
+                }       
+            })          
         })    
     }
 

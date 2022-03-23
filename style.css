@@ -13,10 +13,10 @@ body{
     --angle: 0deg;
     width: 10px;
     height: 10px;
-    border: 5px solid;
+    border: 15px rgb(194, 24, 24) solid;
     /* This will work but yield a wrong result: */
-    border-image: linear-gradient(var(--angle), rgb(116, 33, 33), rgb(163, 163, 52), rgb(50, 170, 50), rgb(51, 160, 160), rgb(19, 19, 145), rgb(138, 32, 138)) 1;
-    animation: 10s rotate linear infinite;
+    /* border-image: linear-gradient(var(--angle), rgb(116, 33, 33), rgb(163, 163, 52), rgb(50, 170, 50), rgb(51, 160, 160), rgb(19, 19, 145), rgb(138, 32, 138)) 1;
+    animation: 10s rotate linear infinite; */
   }
   
   @property --angle {
@@ -84,13 +84,15 @@ body{
     display: flex;
     justify-content: center;
     margin: 10px;
-    padding: 7px;
+    padding: 20px;
 }
 
 
 #resetBtn{
     padding: 20px;
     margin: 5px;
+    background-color: aqua;
+    border: black solid;
 }
 
 .container{
@@ -106,7 +108,7 @@ body{
 } 
 
 .grid-item {
-    border: solid thin rgb(0, 0, 0);
+    border: solid thin rgb(105, 105, 105);
   }
 
 /* .grid-item:hover{
