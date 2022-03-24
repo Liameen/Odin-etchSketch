@@ -1,5 +1,5 @@
 :root {
-    --background-color: #eee;
+    --background-color: rgb(83, 179, 243);
     --grid-cols: 1;
     --grid-rows: 1;
   }
@@ -11,10 +11,12 @@ body{
 
 .container{
     --angle: 0deg;
+    background-color: rgb(238, 238, 238);
     width: 10px;
     height: 10px;
+    border-radius: 10px;
     border: 15px rgb(194, 24, 24) solid;
-    /* This will work but yield a wrong result: */
+    /* this is fot rainbow border */
     /* border-image: linear-gradient(var(--angle), rgb(116, 33, 33), rgb(163, 163, 52), rgb(50, 170, 50), rgb(51, 160, 160), rgb(19, 19, 145), rgb(138, 32, 138)) 1;
     animation: 10s rotate linear infinite; */
   }
@@ -59,6 +61,8 @@ body{
 
 
 
+
+
 #selectButtonsDiv{
     display: flex;
     justify-content: space-evenly;
@@ -67,8 +71,9 @@ body{
 
 #selectButtonsDiv > div > button{
     padding: 20px;
-    background-color: #2196F3;
+    background-color: #f3e521;
     border: black solid;
+    border-radius: 15px;
 }
 
 #selectButtonsDiv > div > button:hover{
@@ -85,14 +90,16 @@ body{
     justify-content: center;
     margin: 10px;
     padding: 20px;
+    border-radius: 15px;
 }
 
 
 #resetBtn{
     padding: 20px;
     margin: 5px;
-    background-color: aqua;
+    background-color: rgb(255, 0, 179);
     border: black solid;
+    border-radius: 15px;
 }
 
 .container{
