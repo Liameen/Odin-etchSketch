@@ -2,6 +2,8 @@
     --background-color: rgb(83, 179, 243);
     --grid-cols: 1;
     --grid-rows: 1;
+    /* --rainbow-border: linear-gradient(var(--angle), rgb(116, 33, 33), rgb(163, 163, 52), rgb(50, 170, 50), rgb(51, 160, 160), rgb(19, 19, 145), rgb(138, 32, 138)) 1;
+    --rainbow-animation: 10s rotate linear infinite; */
   }
 
 
@@ -16,12 +18,13 @@ body{
     height: 10px;
     border-radius: 10px;
     border: 15px rgb(194, 24, 24) solid;
-    /* this is fot rainbow border */
-    /* border-image: linear-gradient(var(--angle), rgb(116, 33, 33), rgb(163, 163, 52), rgb(50, 170, 50), rgb(51, 160, 160), rgb(19, 19, 145), rgb(138, 32, 138)) 1;
-    animation: 10s rotate linear infinite; */
+    /* this is for rainbow border */
+    /* border-image: var(--rainbow-border);
+    
+    animation: var(--rainbow-animation); */
   }
   
-  @property --angle {
+  /* @property --angle {
     syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
@@ -31,7 +34,7 @@ body{
     to {
       --angle: 360deg;
     }
-  }
+  } */
 
 
 #containerTextDiv{

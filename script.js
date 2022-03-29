@@ -97,6 +97,8 @@ pixels.forEach((pixel) =>{
         plainDiv.remove();
         shaderDiv.remove();
         inputBtnDiv.remove();
+        // container.style.borderImage('--rainbow-border');
+        // container.style.animation('--rainbow-animation');
         pixels.forEach((pixel) => {;
             pixel.addEventListener('mouseover', (e) => {
                 if(e.buttons == 1){
